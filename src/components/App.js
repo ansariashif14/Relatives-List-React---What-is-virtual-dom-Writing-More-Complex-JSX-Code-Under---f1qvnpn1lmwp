@@ -3,10 +3,16 @@ import '../styles/App.css';
 
 class App extends Component {
     render() {
+        const arr=["item1", "item2", "item3"];
+        const list=arr.map((value)=>{
+            return <li key={`relativeList+${value}`}>{value}</li>
+        })
 
         return(
             <div id="main">
-               {/* Do not remove the main div */}
+              <ol>
+                {list}
+              </ol>
             </div>
         )
     }
@@ -14,3 +20,5 @@ class App extends Component {
 
 
 export default App;
+
+
